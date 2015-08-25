@@ -1,0 +1,35 @@
+.board {
+	width: 200px;
+	height: 200px;
+	background-color: $board-color;
+	position: relative;
+
+	> div {
+		position: absolute;
+		background-color: $white;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		vertical-align: middle;
+		text-align: center;
+		@include transition(left $fast, top $fast, color $fast);
+
+		@function expon($x,$e) {
+			@if($e==0) {
+				@return 1;
+			}
+			@return $x*expon($x,$e - 1);
+		}
+
+		@function calc-color($e) {
+			@return rgb(floor(50 + $e / 15 * 55), floor(175 - $e / 15 * 155), floor(125 - $e / 15 * 95))
+		}
+
+		@for $i from 1 through 15 {
+			$v: expon(2,$i);
+			&[val="#{$v}"] {
+				background-color: calc-color($i);
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s; }
+  a:hover {
+    color: #3ABEC9;
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    transition: color 0.25s; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  top: 0; }
+  .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+div {
+  box-sizing: border-box; }
+
+.app {
+  display: inline-block; }
+
+.score {
+  margin: 10px 0;
+  font-size: 28px; }
+
+.board {
+  width: 200px;
+  height: 200px;
+  background-color: #AEAFC2;
+  position: relative; }
+  .board > div {
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transition: left 0.25s, top 0.25s, color 0.25s;
+    -moz-transition: left 0.25s, top 0.25s, color 0.25s;
+    transition: left 0.25s, top 0.25s, color 0.25s; }
+    .board > div[val="2"] {
+      background-color: #35a476; }
+    .board > div[val="4"] {
+      background-color: #399a70; }
+    .board > div[val="8"] {
+      background-color: #3d906a; }
+    .board > div[val="16"] {
+      background-color: #408563; }
+    .board > div[val="32"] {
+      background-color: #447b5d; }
+    .board > div[val="64"] {
+      background-color: #487157; }
+    .board > div[val="128"] {
+      background-color: #4b6650; }
+    .board > div[val="256"] {
+      background-color: #4f5c4a; }
+    .board > div[val="512"] {
+      background-color: #535244; }
+    .board > div[val="1024"] {
+      background-color: #56473d; }
+    .board > div[val="2048"] {
+      background-color: #5a3d37; }
+    .board > div[val="4096"] {
+      background-color: #5e3331; }
+    .board > div[val="8192"] {
+      background-color: #61282a; }
+    .board > div[val="16384"] {
+      background-color: #651e24; }
+    .board > div[val="32768"] {
+      background-color: #69141e; }
+
+
+/*# sourceMappingURL=main.css.map */

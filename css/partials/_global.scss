@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	@include transition(color $slow);
+
+	&:hover {
+		color: $blue;
+		@include transition(color $fast);
+	}
+}
+
+.wrapper {
+	@include wrapper;
+}
+
+div {
+	box-sizing: border-box;
+}

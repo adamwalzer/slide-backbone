@@ -14,6 +14,7 @@ function($, _, Backbone) {
 			this.x = opts.x || 0;
 			this.y = opts.y || 0;
 			this.v = opts.z || 2;
+			this.m = opts.m || 0
 			this.p = opts.p || {};
 			this.render();
 		},
@@ -26,6 +27,10 @@ function($, _, Backbone) {
 			this.v = nv || this.v;
 			this.$el.attr({'val':this.v}).html(this.v);
 			return this.v;
+		},
+		move: function(m) {
+			this.m = m || this.m;
+			return this.m;
 		},
 		getX: function() {
 			return this.x;

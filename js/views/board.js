@@ -14,6 +14,7 @@ function($, _, Backbone, PieceView) {
 			this.setupBoard();
 			_.bindAll(this,'keyAction');
 			$(document).bind('keydown', this.keyAction);
+			this.move = 0;
 			this.score = 0;
 			this.$score = this.$('.score');
 			this.$board = this.$('.board');
@@ -43,9 +44,7 @@ function($, _, Backbone, PieceView) {
 					}
 				});
 			});
-			if(spaces.length === 0) {
-				console.log("full");
-			} else {
+			if(spaces.length > 0) {
 				var opts = {};
 				opts.p = this;
 				var l = Math.floor(Math.random()*spaces.length);
@@ -55,8 +54,29 @@ function($, _, Backbone, PieceView) {
 				opts.y = space.y;
 				// opts.z = Math.floor(Math.random()*2+1)*2;
 				opts.z = 2;
+				this.move++;
 				this.updateScore(opts.z);
 				this.b[opts.x][opts.y] = new PieceView(opts);
+			}
+			if(spaces.length === 1) {
+				var alive = false;
+				_.each(self.b, function(a,i) {
+					_.each(a, function(b,j) {
+						if(b && i != 0) {
+							if(b.val() === self.b[i-1][j].val()) {
+								alive = true;
+							}
+						}
+						if(b && j != 0) {
+							if(b.val() === self.b[i][j-1].val()) {
+								alive = true;
+							}
+						}
+					});
+				});
+				if(!alive) {
+					alert("No more moves. Your score is "+this.score);
+				}
 			}
 		},
 		updateScore: function(z) {
@@ -76,8 +96,9 @@ function($, _, Backbone, PieceView) {
 									this.b[i-k+1][j] = null;
 									moved = true;
 								} else {
-									if(this.b[i-k][j].val() === this.b[i-k+1][j].val()) {
+									if(this.b[i-k][j].move() != this.move && this.b[i-k][j].val() === this.b[i-k+1][j].val()) {
 										this.b[i-k][j].val(2*this.b[i-k][j].val());
+										this.b[i-k][j].move(this.move);
 										this.b[i-k+1][j].moveX(this.b[i-k][j].getX()).destroy();
 										this.b[i-k+1][j] = null;
 										moved = true;
@@ -88,13 +109,7 @@ function($, _, Backbone, PieceView) {
 						}
 					}
 				}
-				if(moved) {
-					var self = this;
-					_.delay(function() {
-						self.createPiece();
-					}, 250);
-				}
-				this.moving = false;
+				this.afterMove(moved);
 			}
 		},
 		up: function() {
@@ -110,8 +125,9 @@ function($, _, Backbone, PieceView) {
 									this.b[i][j-k+1] = null;
 									moved = true;
 								} else {
-									if(this.b[i][j-k].val() === this.b[i][j-k+1].val()) {
+									if(this.b[i][j-k].move() != this.move && this.b[i][j-k].val() === this.b[i][j-k+1].val()) {
 										this.b[i][j-k].val(2*this.b[i][j-k].val());
+										this.b[i][j-k].move(this.move);
 										this.b[i][j-k+1].moveY(this.b[i][j-k].getY()).destroy();
 										this.b[i][j-k+1] = null;
 										moved = true;
@@ -122,13 +138,7 @@ function($, _, Backbone, PieceView) {
 						}
 					}
 				}
-				if(moved) {
-					var self = this;
-					_.delay(function() {
-						self.createPiece();
-					}, 250);
-				}
-				this.moving = false;
+				this.afterMove(moved);
 			}
 		},
 		right: function() {
@@ -144,8 +154,9 @@ function($, _, Backbone, PieceView) {
 									this.b[i+k-1][j] = null;
 									moved = true;
 								} else {
-									if(this.b[i+k][j].val() === this.b[i+k-1][j].val()) {
+									if(this.b[i+k][j].move() != this.move && this.b[i+k][j].val() === this.b[i+k-1][j].val()) {
 										this.b[i+k][j].val(2*this.b[i+k][j].val());
+										this.b[i+k][j].move(this.move);
 										this.b[i+k-1][j].moveX(this.b[i+k][j].getX()).destroy();
 										this.b[i+k-1][j] = null;
 										moved = true;
@@ -156,13 +167,7 @@ function($, _, Backbone, PieceView) {
 						}
 					}
 				}
-				if(moved) {
-					var self = this;
-					_.delay(function() {
-						self.createPiece();
-					}, 250);
-				}
-				this.moving = false;
+				this.afterMove(moved);
 			}
 		},
 		down: function() {
@@ -178,8 +183,9 @@ function($, _, Backbone, PieceView) {
 									this.b[i][j+k-1] = null;
 									moved = true;
 								} else {
-									if(this.b[i][j+k].val() === this.b[i][j+k-1].val()) {
+									if(this.b[i][j+k].move() != this.move && this.b[i][j+k].val() === this.b[i][j+k-1].val()) {
 										this.b[i][j+k].val(2*this.b[i][j+k].val());
+										this.b[i][j+k].move(this.move);
 										this.b[i][j+k-1].moveY(this.b[i][j+k].getY()).destroy();
 										this.b[i][j+k-1] = null;
 										moved = true;
@@ -190,14 +196,17 @@ function($, _, Backbone, PieceView) {
 						}
 					}
 				}
-				if(moved) {
-					var self = this;
-					_.delay(function() {
-						self.createPiece();
-					}, 250);
-				}
-				this.moving = false;
+				this.afterMove(moved);
 			}
+		},
+		afterMove: function(moved) {
+			if(moved) {
+				var self = this;
+				_.delay(function() {
+					self.createPiece();
+				}, 250);
+			}
+			this.moving = false;
 		},
 		keyAction: function(e) {
 			var code = e.keyCode || e.which;

@@ -52,8 +52,8 @@ function($, _, Backbone, PieceView) {
 				// spaces.splice(l,1);
 				opts.x = space.x;
 				opts.y = space.y;
-				// opts.z = Math.floor(Math.random()*2+1)*2;
-				opts.z = 2;
+				opts.z = Math.floor(Math.random()*2*.75+1)*2;
+				// opts.z = 2;
 				this.move++;
 				this.updateScore(opts.z);
 				this.b[opts.x][opts.y] = new PieceView(opts);

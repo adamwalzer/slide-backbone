@@ -9,15 +9,15 @@ function($, _, Backbone, PieceView) {
 	"use strict";
 
 	var BoardView = Backbone.View.extend({
-		initialize: function() {
+		initialize: function(opts) {
 			console.log("board");
+			opts = opts || {};
+			this.game = opts.game;
 			this.setupBoard();
 			_.bindAll(this,'keyAction');
 			$(document).bind('keydown', this.keyAction);
 			this.move = 0;
-			this.score = 0;
 			this.$score = this.$('.score');
-			this.$board = this.$('.board');
 			this.moving = false;
 			// this.values = [2];
 			this.createPiece();
@@ -79,14 +79,13 @@ function($, _, Backbone, PieceView) {
 					});
 				});
 				if(!alive) {
-					alert("No more moves. Your score is "+this.score);
+					alert("No more moves. Your score is "+this.game.score);
 				}
 			}
 			// this.values = [];
 		},
 		updateScore: function(z) {
-			this.score += z;
-			this.$score.html(this.score);
+			this.game.updateScore(z);
 		},
 		left: function() {
 			if(!this.moving) {

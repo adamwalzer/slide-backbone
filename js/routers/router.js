@@ -6,9 +6,9 @@ define([
 	'views/slider',
 	'views/main',
 	'views/footer',
-	'views/board'
+	'views/game'
 	],
-function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, BoardView) {
+function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, GameView) {
 
 	"use strict";
 
@@ -20,8 +20,8 @@ function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, BoardView
 				new HeaderView({el:this});
 			});
 
-			$('.app').each(function() {
-				window.board = new BoardView({el:this});
+			$('.game').each(function() {
+				window.board = new GameView({el:this});
 			});
 
 			$('main').each(function() {

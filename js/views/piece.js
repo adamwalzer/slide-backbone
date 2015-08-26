@@ -21,7 +21,7 @@ function($, _, Backbone) {
 		render: function() {
 			this.$el = $('<div style="left:'+this.x*50+'px; top:'+this.y*50+'px;"></div>');
 			this.val(this.v);
-			this.p.$board.append(this.$el);
+			this.p.$el.append(this.$el);
 		},
 		val: function(nv) {
 			this.v = nv || this.v;

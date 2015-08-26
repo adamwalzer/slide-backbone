@@ -13,7 +13,7 @@
 
 			include "components/header.php";
 
-			include "components/board.php";
+			include "components/game.php";
 
 			include "components/footer.php";
 

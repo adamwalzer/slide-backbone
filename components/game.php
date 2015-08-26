@@ -1,4 +1,4 @@
-<div class="app">
+<div class="game">
 	
 	<div class="score">
 		

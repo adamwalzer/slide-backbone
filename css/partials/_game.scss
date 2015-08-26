@@ -1,0 +1,17 @@
+.game {
+	display: inline-block;
+
+	&.one-by-one {
+
+		.board {
+
+			> div {
+				@for $i from 1 through 100 {
+					&[val="#{$i}"] {
+						background-color: calc-color($i % 15);
+					}
+				}
+			}
+		}
+	}
+}

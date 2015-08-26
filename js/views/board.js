@@ -19,6 +19,7 @@ function($, _, Backbone, PieceView) {
 			this.$score = this.$('.score');
 			this.$board = this.$('.board');
 			this.moving = false;
+			this.values = [2];
 			this.createPiece();
 		},
 		render: function() {
@@ -39,7 +40,9 @@ function($, _, Backbone, PieceView) {
 			var self = this;
 			_.each(self.b, function(a,i) {
 				_.each(a, function(b,j) {
-					if(!b) {
+					if(b) {
+						self.values.push(b.val());
+					} else {
 						spaces.push({x:i,y:j});
 					}
 				});
@@ -52,6 +55,7 @@ function($, _, Backbone, PieceView) {
 				// spaces.splice(l,1);
 				opts.x = space.x;
 				opts.y = space.y;
+				// opts.z = Math.min.apply(null,this.values);
 				opts.z = Math.floor(Math.random()*2*.75+1)*2;
 				// opts.z = 2;
 				this.move++;
@@ -78,6 +82,7 @@ function($, _, Backbone, PieceView) {
 					alert("No more moves. Your score is "+this.score);
 				}
 			}
+			this.values = [];
 		},
 		updateScore: function(z) {
 			this.score += z;

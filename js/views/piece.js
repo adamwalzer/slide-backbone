@@ -19,13 +19,15 @@ function($, _, Backbone) {
 			this.render();
 		},
 		render: function() {
-			this.$el = $('<div style="left:'+this.x*50+'px; top:'+this.y*50+'px;"></div>');
+			this.$el = $('<div style="left:'+this.x*50+'px; top:'+this.y*50+'px;"><span></span></div>');
+			this.$span = this.$el.find('span');
 			this.val(this.v);
 			this.p.$el.append(this.$el);
 		},
 		val: function(nv) {
 			this.v = nv || this.v;
-			this.$el.attr({'val':this.v}).html(this.v);
+			this.$el.attr({'val':this.v})
+			this.$span.html(this.v);
 			return this.v;
 		},
 		move: function(m) {

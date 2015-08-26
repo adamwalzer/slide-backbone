@@ -277,6 +277,14 @@ div {
     background-color: #535244; }
   .game.one-by-one .board > div[val="100"] {
     background-color: #56473d; }
+  .game.twist .board {
+    -webkit-transition: -webkit-transform 0.25s;
+    -moz-transition: -moz-transform 0.25s;
+    transition: transform 0.25s; }
+    .game.twist .board > div span {
+      -webkit-transition: -webkit-transform 0.25s;
+      -moz-transition: -moz-transform 0.25s;
+      transition: transform 0.25s; }
 
 .score {
   margin: 10px 0;
@@ -328,6 +336,8 @@ div {
       background-color: #651e24; }
     .board > div[val="32768"] {
       background-color: #69141e; }
+    .board > div span {
+      display: inline-block; }
 
 
 /*# sourceMappingURL=main.css.map */

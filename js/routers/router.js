@@ -7,9 +7,10 @@ define([
 	'views/main',
 	'views/footer',
 	'views/game',
-	'views/one-by-one'
+	'views/one-by-one',
+	'views/twist',
 	],
-function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, GameView, OneByOneGameView) {
+function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, GameView, OneByOneGameView, TwistGameView) {
 
 	"use strict";
 
@@ -30,7 +31,7 @@ function($, _, Backbone, HeaderView, SliderView, MainView, FooterView, GameView,
 			});
 
 			$('.game.twist').each(function() {
-				window.board = new GameView({el:this});
+				window.board = new TwistGameView({el:this});
 			});
 
 			$('main').each(function() {

@@ -14,4 +14,15 @@
 			}
 		}
 	}
+
+	&.twist {
+
+		.board {
+			@include transition(transform $fast);
+
+			> div span {
+				@include transition(transform $fast);
+			}
+		}
+	}
 }

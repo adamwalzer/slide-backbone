@@ -55,10 +55,7 @@ function($, _, Backbone, PieceView) {
 				// spaces.splice(l,1);
 				opts.x = space.x;
 				opts.y = space.y;
-				opts.z = Math.min.apply(null,this.values);
-				var d = Math.floor(Math.random()*5*.25);
-				console.log(d);
-				opts.z -= d;
+				opts.z = Math.min.apply(null,this.values)-Math.floor(Math.random()*5*.25);
 				// opts.z = Math.floor(Math.random()*2*.75+1)*2;
 				// opts.z = 2;
 				this.move++;

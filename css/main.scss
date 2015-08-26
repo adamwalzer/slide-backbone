@@ -4,11 +4,13 @@
 
 // resources
 @import "partials/variables";
+@import "partials/functions";
 @import "partials/mixins";
 
 // global
 @import "partials/global";
 @import "partials/app";
+@import "partials/game";
 @import "partials/score";
 @import "partials/board";
 

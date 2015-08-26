@@ -77,6 +77,206 @@ div {
 
 .game {
   display: inline-block; }
+  .game.one-by-one .board > div[val="1"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="2"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="3"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="4"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="5"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="6"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="7"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="8"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="9"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="10"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="11"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="12"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="13"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="14"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="15"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="16"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="17"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="18"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="19"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="20"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="21"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="22"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="23"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="24"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="25"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="26"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="27"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="28"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="29"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="30"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="31"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="32"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="33"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="34"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="35"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="36"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="37"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="38"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="39"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="40"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="41"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="42"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="43"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="44"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="45"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="46"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="47"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="48"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="49"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="50"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="51"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="52"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="53"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="54"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="55"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="56"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="57"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="58"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="59"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="60"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="61"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="62"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="63"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="64"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="65"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="66"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="67"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="68"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="69"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="70"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="71"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="72"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="73"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="74"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="75"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="76"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="77"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="78"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="79"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="80"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="81"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="82"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="83"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="84"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="85"] {
+    background-color: #56473d; }
+  .game.one-by-one .board > div[val="86"] {
+    background-color: #5a3d37; }
+  .game.one-by-one .board > div[val="87"] {
+    background-color: #5e3331; }
+  .game.one-by-one .board > div[val="88"] {
+    background-color: #61282a; }
+  .game.one-by-one .board > div[val="89"] {
+    background-color: #651e24; }
+  .game.one-by-one .board > div[val="90"] {
+    background-color: #32af7d; }
+  .game.one-by-one .board > div[val="91"] {
+    background-color: #35a476; }
+  .game.one-by-one .board > div[val="92"] {
+    background-color: #399a70; }
+  .game.one-by-one .board > div[val="93"] {
+    background-color: #3d906a; }
+  .game.one-by-one .board > div[val="94"] {
+    background-color: #408563; }
+  .game.one-by-one .board > div[val="95"] {
+    background-color: #447b5d; }
+  .game.one-by-one .board > div[val="96"] {
+    background-color: #487157; }
+  .game.one-by-one .board > div[val="97"] {
+    background-color: #4b6650; }
+  .game.one-by-one .board > div[val="98"] {
+    background-color: #4f5c4a; }
+  .game.one-by-one .board > div[val="99"] {
+    background-color: #535244; }
+  .game.one-by-one .board > div[val="100"] {
+    background-color: #56473d; }
 
 .score {
   margin: 10px 0;

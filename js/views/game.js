@@ -11,6 +11,7 @@ function($, _, Backbone, BoardView) {
 	var GameView = Backbone.View.extend({
 		initialize: function() {
 			console.log("game");
+			this.$('.title').html("Slide - Original");
 			this.score = 0;
 			this.$score = this.$('.score');
 			this.board = new BoardView({el:this.$('.board')[0],game:this});

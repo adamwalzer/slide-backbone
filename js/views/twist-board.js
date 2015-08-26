@@ -14,8 +14,7 @@ function($, _, Backbone, PieceView) {
 			opts = opts || {};
 			this.game = opts.game;
 			this.setupBoard();
-			_.bindAll(this,'keyAction');
-			$(document).bind('keydown', this.keyAction);
+			$(document).bind('keydown', _.bind(this.keyAction,this));
 			this.move = 0;
 			this.$score = this.$('.score');
 			this.moving = false;

@@ -75,6 +75,23 @@ a {
 div {
   box-sizing: border-box; }
 
+.welcome {
+  padding: 20px; }
+  .welcome h1 {
+    font-size: 48px;
+    margin-bottom: 40px; }
+  .welcome ul {
+    padding: 20px; }
+    .welcome ul li {
+      display: block;
+      background-color: #AEAFC2;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: 20px; }
+      .welcome ul li a {
+        padding: 10px;
+        display: block; }
+
 .game {
   display: inline-block; }
   .game.one-by-one .board > div[val="1"] {

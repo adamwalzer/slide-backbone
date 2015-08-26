@@ -1,0 +1,25 @@
+.welcome {
+	padding: 20px;
+
+	h1 {
+		font-size: 48px;
+		margin-bottom: 40px;
+	}
+
+	ul {
+		padding: 20px;
+
+		li {
+			display: block;
+			background-color: $grey;
+			border-radius: 20px;
+			margin-bottom: 20px;
+			font-size: 20px;
+
+			a {
+				padding: 10px;
+				display: block;
+			}
+		}
+	}
+}

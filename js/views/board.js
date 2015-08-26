@@ -2,7 +2,8 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'views/piece'
+	'views/piece',
+	'touchswipe'
 	],
 function($, _, Backbone, PieceView) {
 
@@ -14,8 +15,14 @@ function($, _, Backbone, PieceView) {
 			opts = opts || {};
 			this.game = opts.game;
 			this.setupBoard();
-			_.bindAll(this,'keyAction');
-			$(document).bind('keydown', this.keyAction);
+			// _.bindAll(this,'keyAction');
+			$(document).bind('keydown', _.bind(this.keyAction,this));
+			$(document).touchswipe({
+				swipeLeft: this.left(),
+				swipeRight: this.right(),
+				swipeUp: this.up(),
+				swipeDown: this.down()
+			});
 			this.move = 0;
 			this.$score = this.$('.score');
 			this.moving = false;

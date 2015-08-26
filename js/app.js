@@ -16,7 +16,8 @@ requirejs.config({
         jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min',
         underscore: 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min',
         backbone: 'https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
-        jquerymobile: 'https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min'
+        jquerymobile: 'https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min',
+        touchswipe: './lib/jquery.touchswipe'
     }
 });
 

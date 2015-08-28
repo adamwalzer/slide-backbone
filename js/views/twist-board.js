@@ -15,6 +15,10 @@ function($, _, Backbone, PieceView) {
 			this.game = opts.game;
 			this.setupBoard();
 			$(document).bind('keydown', _.bind(this.keyAction,this));
+			$(document).touchswipe({
+				swipeLeft: _.bind(this.ccw,this),
+				swipeRight: _.bind(this.cw,this)
+			});
 			this.move = 0;
 			this.$score = this.$('.score');
 			this.moving = false;

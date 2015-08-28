@@ -18,10 +18,10 @@ function($, _, Backbone, PieceView) {
 			// _.bindAll(this,'keyAction');
 			$(document).bind('keydown', _.bind(this.keyAction,this));
 			$(document).touchswipe({
-				swipeLeft: this.left(),
-				swipeRight: this.right(),
-				swipeUp: this.up(),
-				swipeDown: this.down()
+				swipeLeft: _.bind(this.left,this),
+				swipeRight: _.bind(this.right,this),
+				swipeUp: _.bind(this.down,this),
+				swipeDown: _.bind(this.up,this)
 			});
 			this.move = 0;
 			this.$score = this.$('.score');

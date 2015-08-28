@@ -2,7 +2,8 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'views/piece'
+	'views/piece',
+	'touchswipe'
 	],
 function($, _, Backbone, PieceView) {
 
@@ -15,6 +16,12 @@ function($, _, Backbone, PieceView) {
 			this.game = opts.game;
 			this.setupBoard();
 			$(document).bind('keydown', _.bind(this.keyAction,this));
+			$(document).touchswipe({
+				swipeLeft: _.bind(this.left,this),
+				swipeRight: _.bind(this.right,this),
+				swipeUp: _.bind(this.down,this),
+				swipeDown: _.bind(this.up,this)
+			});
 			this.move = 0;
 			this.$score = this.$('.score');
 			this.moving = false;
@@ -54,7 +61,7 @@ function($, _, Backbone, PieceView) {
 				// spaces.splice(l,1);
 				opts.x = space.x;
 				opts.y = space.y;
-				opts.z = Math.max(Math.min.apply(null,this.values)-Math.floor(Math.random()*8/7),1);
+				opts.z = Math.max(Math.min.apply(null,this.values)-Math.floor(Math.random()*10/9),1);
 				// opts.z = Math.floor(Math.random()*2*.75+1)*2;
 				// opts.z = 2;
 				this.move++;

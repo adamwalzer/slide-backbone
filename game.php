@@ -11,12 +11,8 @@
 		
 		<?php 
 
-			include "components/header.php";
-
 			$game_class = array_key_exists('game', $_GET)?$_GET['game']:"original";
 			include "components/game.php";
-
-			include "components/footer.php";
 
 		?>
 
